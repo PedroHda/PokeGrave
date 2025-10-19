@@ -3,7 +3,7 @@
 > Um site para registrar e homenagear os pokémons que caíram em sua jornada Nuzlocke. Cada queda vira memória, cada memória vira história.
 
 ## ✨ Por que existe?
-No desafio **Nuzlocke**, quando um Pokémon chega a **0 HP** ele é considerado **morto** e deve ser liberado/boxado. A ideia deste projeto é **guardar para sempre** quem fez parte da sua aventura: onde caiu, contra quem lutou, qual foi a causa, e o que vocês conquistaram juntos.
+No desafio **Nuzlocke**, quando um Pokémon chega a **0 HP** ele é considerado **morto** e deve ser liberado. A ideia deste projeto é **guardar para sempre** quem fez parte da sua aventura: onde caiu, contra quem lutou, qual foi a causa, e o que vocês conquistaram juntos.
 
 ## 🎯 Objetivos do projeto
 - **Memorial online** dos pokémons perdidos em runs Nuzlocke.
@@ -70,69 +70,10 @@ No desafio **Nuzlocke**, quando um Pokémon chega a **0 HP** ele é considerado 
   ]
 }
 ```
-
-> **Sugestão de enum para `cause`**: `critical-hit`, `status-poison`, `status-burn`, `confusion`, `self-destruct`, `overlevel`, `missplay`, `sweep`, `stall`, `trap`, `weather`, `arena`, `other`.
-
-## 🛠️ Stack sugerida (adaptável)
-- Frontend: **React/Next.js** (App Router)  
-- Banco: **SQLite** (Prisma) ou **PostgreSQL**  
-- Armazenamento de imagens: **S3/Cloud** (ou local em `/public/screens`)  
-- Estilo: **Tailwind CSS** + **Radix UI**  
-- Deploy: **Vercel**, **Netlify** ou **Docker**
-
-> Você pode começar **sem backend**, salvando em `data/memorial.json`, e evoluir depois para uma API.
-
-## 🚀 Comece agora (exemplo com Node/Next.js)
-```bash
-# 1) Criar projeto
-npx create-next-app@latest nuzlocke-memorial
-cd nuzlocke-memorial
-
-# 2) Instalar Tailwind (opcional)
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-# 3) Crie uma pasta de dados
-mkdir -p data && echo '{}' > data/memorial.json
-
-# 4) Rodar
-npm run dev
-```
-
-## 📦 Scripts úteis (idéia)
-- `npm run dev` — ambiente de desenvolvimento  
-- `npm run lint` — qualidade  
-- `npm run build && npm start` — produção  
-- `npm run export` — exporta estático (para GitHub Pages)
-
-## 🗺️ Roadmap
-- [ ] Autenticação simples (para runs privadas)  
-- [ ] Importar de planilha `.csv` (PokéTracker/Excel)  
-- [ ] Compartilhamento público (URL única da run)  
-- [ ] “Hall da Fama” para os sobreviventes  
-- [ ] Estatísticas (tipos mais comuns de morte, ginásios mais letais, etc.)  
-- [ ] Multi-idioma (pt-BR/en)  
-
-## 🤝 Contribuindo
-1. Faça um **fork**
-2. Crie uma branch: `feat/nome-da-feature`
-3. **Commits** claros (Conventional Commits são bem-vindos)
-4. **PR** com descrição e screenshots/gifs
-
-## 🔒 Licença
-Sugestão: **MIT**.  
-> Projeto de fã, **sem afiliação** com Nintendo/Game Freak/The Pokémon Company. Marcas registradas pertencem aos seus respectivos donos.
-
 ## 📝 FAQ
 **O que é Nuzlocke?**  
 Conjunto de regras auto-impostas que aumenta a dificuldade (ex.: primeiro encontro por rota; faint = morte).
 
-**Posso usar imagens do jogo?**  
-Use prints próprios. Respeite direitos autorais.
-
-**Sem backend, dá pra usar?**  
-Sim. Comece com um arquivo `data/memorial.json` e evolua quando quiser.
 
 ---
 
-Se você usar este template, compartilhe um print do seu “cemitério” no PR de **Showcase**! 🌑🕯️
