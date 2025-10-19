@@ -76,4 +76,3 @@ Conjunto de regras auto-impostas que aumenta a dificuldade (ex.: primeiro encont
 
 
 ---
-
