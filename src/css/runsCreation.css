@@ -1,0 +1,104 @@
+:root{
+  --bg: #f8fafc;            /* slate-50 */
+  --border: #e2e8f0;        /* slate-200 */
+  --text-700: #334155;      /* slate-700 */
+  --text-500: #64748b;      /* slate-500 */
+  --white: #ffffff;
+
+  --blue-500:#3b82f6;
+  --blue-700:#1d4ed8;
+  --blue-100:#dbeafe;
+  --blue-400:#60a5fa;
+
+  --red-600:#dc2626;
+  --red-700:#b91c1c;
+  --red-800:#991b1b;
+
+  --radius-xl: 1rem;        /* 16px */
+  --radius-3xl: 1.5rem;     /* 24px */
+  --shadow-xl: 0 20px 40px rgba(2,8,23,.08);
+  --ring: 0 0 0 1px rgba(0,0,0,.05);
+}
+
+/* Página */
+.page{
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  padding: 24px;
+}
+
+/* Card */
+.card{
+  width: 100%;
+  max-width: 42rem;               /* ~ 672px */
+  background: var(--white);
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(0,0,0,.05);
+  padding: clamp(32px, 5vw, 48px);
+}
+
+/* Cabeçalho */
+.title{
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, var(--blue-500), var(--blue-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 0;
+}
+.subtitle{
+  margin-top: 8px;
+  color: var(--text-500);
+  text-align: center;
+}
+
+/* Form / Campos */
+.form{ display: grid; gap: 24px; }
+
+.field label{
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-700);
+  margin-bottom: 6px;
+}
+.input{
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  border-radius: 0.75rem;          /* ~ rounded-xl */
+  padding: 12px 16px;              /* py-3 px-4 */
+  outline: none;
+  box-shadow: 0 0 0 0 rgba(99,102,241,0);
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.input::placeholder{ color: #94a3b8; } /* slate-400 */
+.input:focus{
+  border-color: var(--blue-400);
+  box-shadow: 0 0 0 6px var(--blue-100);
+}
+
+/* Botão */
+.actions{ padding-top: 8px; }
+.btn{
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;             /* ~ rounded-2xl */
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--red-600);
+  box-shadow: 0 6px 16px rgba(220,38,38,.25);
+  cursor: pointer;
+  transition: filter .15s ease, transform .02s ease, background .15s ease;
+}
+.btn:hover{ background: var(--red-700); filter: brightness(0.98); }
+.btn:active{ background: var(--red-800); transform: translateY(1px); }
+.btn:disabled{ opacity: .6; cursor: not-allowed; }
